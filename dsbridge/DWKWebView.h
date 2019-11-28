@@ -14,6 +14,8 @@ typedef void (^JSCallback)(NSString * _Nullable result,BOOL complete);
 
 @property (nullable, nonatomic, weak) id <WKUIDelegate> DSUIDelegate;
 
+@property (nullable, nonatomic, weak) UIViewController *containerViewController;
+
 - (void)loadUrl: (NSString * _Nonnull) url;
 
 // Call javascript handler
