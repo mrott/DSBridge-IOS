@@ -163,12 +163,12 @@ completionHandler:(void (^)(void))completionHandler
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:message
                                                                        message:@""
                                                                 preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:dialogTextDic[@"alertTitle"]?dialogTextDic[@"alertTitle"]:@"提示"
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:dialogTextDic[@"alertCancelBtn"]?dialogTextDic[@"alertCancelBtn"]:@"Cancel"
                                                                style:UIAlertActionStyleDefault
                                                              handler:^(UIAlertAction * _Nonnull action) {
 //                                                                 [alert dismissViewControllerAnimated:true completion:nil];
                                                              }];
-        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:dialogTextDic[@"alertBtn"]?dialogTextDic[@"alertBtn"]:@"确定"
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:dialogTextDic[@"alertBtn"]?dialogTextDic[@"alertBtn"]:@"OK"
                                                               style:UIAlertActionStyleDefault
                                                             handler:^(UIAlertAction * _Nonnull action) {
                                                                 if (alertHandler != nil) {
